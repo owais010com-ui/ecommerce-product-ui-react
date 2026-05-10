@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #000000;
+  font-family: sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+  background: #0f0f0f;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header h1 {
+  color: #ff0252;
+  font-size: 30px;
+}
+
+.header input {
+  color: #ffff;
+  border-radius: 30px;
+  background: #060606cc;
+  border: 1px solid #060606cc;
+  outline: none;
+  padding: 15px 60px;
+}
+
+.header input:focus {
+  border: 1px solid #ff0252;
+  box-shadow: 1px 1px 8px #ff0252;
+}
+
+.showData {
+  width: 96%;
+  margin: auto;
+  padding: 30px 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: #181818;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #2a2a2a;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border: 1px solid #ff0252;
+  box-shadow: 0px 0px 18px #ff0252;
+}
+
+.imgBox {
+  width: 100%;
+  height: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111;
+}
+
+.imgBox img {
+  max-width: 90%;
+  max-height: 180px;
+  object-fit: contain;
+}
+
+
+.cardContent {
+  padding: 16px;
+}
+
+.cardContent h2 {
+  font-size: 18px;
+  color: white;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cardContent p {
+  color: #b3b3b3;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  color: #ff0252;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.buyBtn {
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: white;
+  color: #ff0252;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buyBtn:hover {
+  background: #ff0252;
+  color: black;
+}
+@media (max-width: 1500px) {
+  .header{
+    padding: 10px 30px;
+  }
+  .showData {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 1100px) {
+  .showData {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .showData {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .showData {
+    grid-template-columns: 1fr;
+  }
+}
