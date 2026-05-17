@@ -24,18 +24,19 @@ body {
   font-size: 30px;
 }
 
-.header input {
-  color: #ffff;
-  border-radius: 30px;
-  background: #060606cc;
-  border: 1px solid #060606cc;
-  outline: none;
-  padding: 15px 60px;
+.header .selectBox {
+  color: #ffffff;
+  background-color: #000000;
+  border: 1px solid #ff0252;
+  padding: 10px 20px;
+  border-radius: 10px;
+
 }
 
-.header input:focus {
+
+.header .selectBox:focus {
   border: 1px solid #ff0252;
-  box-shadow: 1px 1px 8px #ff0252;
+  box-shadow: 2px 2px 21px #ff0252;
 }
 
 .showData {
@@ -127,10 +128,12 @@ body {
   background: #ff0252;
   color: black;
 }
+
 @media (max-width: 1500px) {
-  .header{
+  .header {
     padding: 10px 30px;
   }
+
   .showData {
     grid-template-columns: repeat(4, 1fr);
   }
