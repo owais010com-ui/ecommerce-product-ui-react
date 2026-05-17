@@ -6,9 +6,8 @@ const Header = ({ selectItems, setSelectItems, productItems }) => {
             <h1>Product.Web</h1>
 
             <select className='selectBox' value={selectItems}
-                onChange={(events) => {
-                    setSelectItems(events.target.value)
-                }}>
+                onChange={(e) => { setSelectItems(e.target.value) }}>
+                    
                 <option value="">ALL</option>
                 {productItems?.map((eachItems) => {
                     return (
